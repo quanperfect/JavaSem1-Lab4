@@ -1,7 +1,9 @@
 package сreature;
 
+import enums.Type;
+
 public abstract class Creature {
-    public String type;
+    public Type type;
     public String location;
     public Integer age;
     public Integer hp;
@@ -13,9 +15,9 @@ public abstract class Creature {
     public Boolean canFly;
     public Boolean eyesShining;
     public String referencedBy;
-    
 
-    public String getType() {
+
+    public Type getType() {
         return type;
     }
 
@@ -59,51 +61,57 @@ public abstract class Creature {
         return eyesShining;
     }
 
-    void Walk() {
+    void walk() {
         currentMovementSpeed = defaultMovementSpeed;
         System.out.println(referencedBy + " is walking");
     }
 
-    void Run() {
-        currentMovementSpeed = 2*defaultMovementSpeed;
+    void run() {
+        currentMovementSpeed = 2 * defaultMovementSpeed;
         System.out.println(referencedBy + " is running");
     }
 
-    void ShineEyes() {
+    void shineEyes() {
         eyesShining = true;
         System.out.println(referencedBy + " eyes are shining");
     }
 
-    void GetDirty() {
+    void getDirty() {
         isDirty = true;
         System.out.println(referencedBy + " is now dirty");
     }
 
-    void TakeDamage(Integer dmg) {
+    void takeDamage(Integer dmg) {
         hp = hp - dmg;
         System.out.println(referencedBy + " lost " + dmg + " hp");
     }
 
-    void Heal(Integer heal) {
+
+    void heal(Integer heal) {
         hp = hp + heal;
         System.out.println(referencedBy + " gained " + heal + " hp");
     }
 
-    void CastSpell(String spellType) {
-        if (spellType == "defensive")
-        {
+    void castSpell(String spellType, Creature target) {
+        if (spellType == "defensive") {
             mana = mana - 1;
             System.out.println(referencedBy + " casted defensive spell and lost " + "1" + " mana");
-        }
-        else {
+        } else {
             if (spellType == "offensive") {
                 mana = mana - 10;
                 System.out.println(referencedBy + " casted offensive spell and lost " + "10" + " mana");
+                target.takeDamage(5);
             }
         }
     }
 
+    void attack(Creature target) {
+        target.takeDamage(1);
+    }
 
-
+    void die() {
+        System.out.println(referencedBy + " is died");
+        // I would destroy an object here but Java doesn't want me to do it
+    }
 
 }

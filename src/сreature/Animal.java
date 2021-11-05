@@ -1,10 +1,11 @@
 package сreature;
 
+import enums.Type;
+
 public class Animal extends Creature {
 
-    public Animal(String type, Integer age, Integer hp, Integer mana, Integer legAmount, Integer defaultMovementSpeed, Boolean isDirty, Boolean canFly, Boolean eyesShining) {
+    public Animal(Type type, Integer age, Integer hp, Integer mana, Integer legAmount, Integer defaultMovementSpeed, Boolean isDirty, Boolean canFly, Boolean eyesShining) {
         this.type = type;
-        referencedBy = type;
         this.age = age;
         this.hp = hp;
         this.mana = mana;
@@ -16,7 +17,7 @@ public class Animal extends Creature {
         this.currentMovementSpeed = 0;
     }
 
-    void Fly() {
+    void fly() {
         if (canFly) {
             System.out.println(this.type + " is flying");
         }
