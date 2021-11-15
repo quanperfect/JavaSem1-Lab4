@@ -22,13 +22,13 @@
 <br />
 
 1. final, static
-2. import
-3. модель - SOLID
-4. 2 интерфейса ; 1 абстрактный класс
-5. Переопределить equals() toString() hashCode();
-6. 1 enum
-7. checked unchecked exceptions и их обработка
-8. локальные анонимные вложенные классы static и non-static
+2. import +
+3. модель - SOLID ?
+4. 2 интерфейса ; 1 абстрактный класс - +
+5. Переопределить equals() toString() hashCode(); -
+6. 1 enum +
+7. checked unchecked exceptions и их обработка +
+8. локальные анонимные вложенные классы static и non-static -
 
 <br />
 
