@@ -1,12 +1,12 @@
 package enums;
 
 public enum Location {
-    SWAMP ("swamp",false),
-    HOUSE ("house",true),
-    HAMMOCK ("hammock",false);
+    SWAMP ("Swamp",false),
+    HOUSE ("House",true),
+    HAMMOCK ("Hammock",false);
 
-    private String locationName;
-    private Boolean Safe;
+    private final String locationName;
+    private final Boolean Safe;
 
     Location (String locationName, Boolean Safe) {
         this.locationName = locationName;

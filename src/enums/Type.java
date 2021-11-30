@@ -1,18 +1,18 @@
 package enums;
 
 public enum Type {
-    TROLL("troll", 0, 10, 100, 100, false),
-    FROG("frog", 0, 2, 10, 10, false),
-    DRAGONFLY("dragonfly", 0, 1, 5, 5, true),
-    DBSPIDER("dbspider", 7, 1, 1, 1, false),
-    BOOGER("booger", 25, 25, 200, 200, true);
+    TROLL("Troll", 0, 10, 200, 200, false),
+    FROG("Frog", 0, 2, 25, 10, false),
+    DRAGONFLY("Dragonfly", 0, 1, 20, 5, true),
+    DBSPIDER("Dbspider", 7, 1, 15, 1, false),
+    BOOGER("Booger", 25, 25, 200, 200, true);
 
-    public String typeName = "null";
-    public Integer strength = 0;
-    public Integer intelligence = 0;
-    public Integer maxHP = 0;
-    public Integer maxMana = 0;
-    public Boolean canFly = false;
+    private String typeName = "null";
+    private Integer strength = 0;
+    private Integer intelligence = 0;
+    private Integer maxHP = 0;
+    private Integer maxMana = 0;
+    private Boolean canFly = false;
 
     Type(String typeName, Integer strength, Integer intelligence, Integer maxHP, Integer maxMana, Boolean canFly) {
         this.typeName = typeName;
